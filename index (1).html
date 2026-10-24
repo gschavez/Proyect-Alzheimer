@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estructura del proyecto: sistema multimodal de tamizaje cognitivo del Alzheimer.">
+  <title>Sistema multimodal de tamizaje cognitivo del Alzheimer</title>
+  <style>
+    :root {
+      --navy: #172554;
+      --blue: #2563eb;
+      --pale: #eff6ff;
+      --ink: #1f2937;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --paper: #ffffff;
+      --bg: #f3f6fb;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .topbar {
+      background: var(--navy);
+      color: #fff;
+      padding: 28px 20px 34px;
+    }
+    .topbar-inner, main { width: min(980px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: .76rem;
+      font-weight: 700;
+      color: #bfdbfe;
+      margin: 0 0 10px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin: 0;
+      max-width: 800px;
+    }
+    .subtitle { color: #dbeafe; margin: 14px 0 0; max-width: 700px; }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 24px;
+    }
+    nav a {
+      color: white; text-decoration: none; font-size: .9rem;
+      border: 1px solid #52658e; border-radius: 999px;
+      padding: 7px 12px;
+    }
+    nav a:hover { background: #263968; }
+    main { padding: 28px 0 56px; }
+    section {
+      background: var(--paper); border: 1px solid var(--line);
+      border-radius: 16px; padding: clamp(20px, 4vw, 34px);
+      margin: 0 0 20px; box-shadow: 0 6px 22px rgba(15, 23, 42, .035);
+      scroll-margin-top: 18px;
+    }
+    h2 {
+      color: var(--navy); font-size: 1.25rem; line-height: 1.3;
+      margin: 0 0 18px; display: flex; gap: 12px; align-items: center;
+    }
+    h2::before {
+      content: ""; display: block; width: 5px; height: 26px;
+      border-radius: 8px; background: var(--blue); flex: 0 0 5px;
+    }
+    h3 { color: var(--navy); font-size: 1rem; margin: 22px 0 8px; }
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+    .project-title {
+      padding: 18px 20px; background: var(--pale); border-radius: 12px;
+      border: 1px solid #dbeafe; font-size: 1.15rem; font-weight: 650;
+      color: var(--navy);
+    }
+    .question {
+      margin-top: 18px; border-left: 3px solid var(--blue);
+      padding: 12px 16px; background: #f8fafc; border-radius: 0 10px 10px 0;
+    }
+    .objective {
+      background: #f8fafc; padding: 16px; border-radius: 12px;
+      border: 1px solid #e5eaf2; margin: 10px 0;
+    }
+    ol, ul { padding-left: 24px; margin: 8px 0 0; }
+    li { margin: 0 0 10px; padding-left: 3px; }
+    li:last-child { margin-bottom: 0; }
+    .reference {
+      border-bottom: 1px solid var(--line); padding: 0 0 16px; margin-bottom: 16px;
+      overflow-wrap: anywhere;
+    }
+    .reference:last-child { border: 0; padding-bottom: 0; margin-bottom: 0; }
+    a { color: #1d4ed8; }
+    .note {
+      border-radius: 10px; padding: 12px 15px; background: #f8fafc;
+      color: var(--muted); font-size: .92rem; margin-top: 14px;
+    }
+    footer { text-align: center; color: var(--muted); padding: 0 16px 30px; font-size: .88rem; }
+    @media (max-width: 560px) {
+      .topbar { padding-top: 24px; }
+      nav a { font-size: .82rem; }
+      section { border-radius: 12px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .topbar { background: #fff; color: #111827; padding: 0 0 20px; }
+      .eyebrow, .subtitle { color: #374151; }
+      nav { display: none; }
+      main { width: 100%; padding-top: 10px; }
+      section { box-shadow: none; break-inside: avoid; border: 1px solid #ccc; }
+      a { color: #111827; }
+      footer { padding-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <p class="eyebrow">Estructura del proyecto</p>
+      <h1>Desarrollo de un sistema multimodal de tamizaje cognitivo del Alzheimer</h1>
+      <p class="subtitle">Propuesta de apoyo a la evaluación inicial mediante imágenes de resonancia magnética y características de voz.</p>
+      <nav aria-label="Navegación del documento">
+        <a href="#problema">Problema y justificación</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#marco">Marco referencial</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#referencias">Referencias</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="problema">
+      <h2>Planteamiento del problema y justificación</h2>
+      <p>La detección temprana del Alzheimer depende de pruebas neuropsicológicas, valoración especializada y neuroimagen. Son recursos costosos y escasos, por lo que muchos casos de deterioro cognitivo incipiente no se identifican en la evaluación inicial, y eso retrasa el diagnóstico y la atención. Además, las herramientas computacionales suelen usar una sola fuente de información (imagen o voz) y pierden datos complementarios.</p>
+      <div class="question">
+        <strong>Pregunta de investigación</strong>
+        <p>¿En qué medida combinar, mediante fusión tardía, un clasificador de imágenes de resonancia magnética y uno de características de voz mejora la estimación del riesgo cognitivo frente al uso de cada fuente por separado?</p>
+      </div>
+      <h3>Justificación</h3>
+      <p>El proyecto ofrece una herramienta de tamizaje, no de diagnóstico, que apoya la remisión a evaluación especializada y busca reducir la tasa de omisión en la etapa inicial. La fusión tardía con transfer learning permite aprovechar modelos preentrenados sin necesitar grandes volúmenes de datos propios. El uso de Python con herramientas de código abierto y de Flask con Gunicorn hace que el sistema sea de bajo costo y replicable. Al emitir un nivel de riesgo y no un diagnóstico, la decisión clínica queda en manos del profesional de la salud.</p>
+    </section>
+
+    <section id="objetivos">
+      <h2>Objetivos del proyecto</h2>
+      <div class="objective">
+        <h3>Objetivo general</h3>
+        <p>Desarrollar un sistema de apoyo al tamizaje cognitivo para la enfermedad de Alzheimer que combine imágenes de resonancia magnética cerebral y características de voz mediante fusión tardía, para estimar un nivel de riesgo cognitivo en la evaluación inicial.</p>
+      </div>
+      <h3>Objetivos específicos</h3>
+      <ol>
+        <li>Desarrollar los clasificadores independientes de imagen (MRI) y de voz, aplicando transfer learning.</li>
+        <li>Desarrollar un meta-clasificador de regresión logística que combine las probabilidades de ambos modelos y las traduzca en un nivel de riesgo cognitivo.</li>
+        <li>Desarrollar una aplicación web con Flask y Gunicorn que presente el resultado como nivel de riesgo, no como diagnóstico, y evaluar su desempeño con métricas de clasificación, dando prioridad a la sensibilidad.</li>
+      </ol>
+    </section>
+
+    <section id="marco">
+      <h2>Marco referencial (opcional)</h2>
+      <ul>
+        <li><strong>Enfermedad de Alzheimer:</strong> enfermedad neurodegenerativa progresiva y causa más frecuente de demencia. Produce atrofia cerebral, sobre todo en el hipocampo, y deterioro de la memoria, el lenguaje y otras funciones cognitivas.</li>
+        <li><strong>Tamizaje frente a diagnóstico:</strong> el tamizaje identifica personas con mayor riesgo para remitirlas a evaluación especializada. No confirma la enfermedad. Por eso se prioriza la sensibilidad, para no omitir casos.</li>
+      </ul>
+    </section>
+
+    <section id="metodologia">
+      <h2>Metodología a utilizar y cronograma de desarrollo</h2>
+      <ol>
+        <li><strong>Comprensión y recolección de datos:</strong> seleccionar los conjuntos públicos de MRI y de voz, que son candidatos a verificar en cuanto a acceso y licencia. Ejemplos: un dataset de MRI de Alzheimer en Kaggle y un corpus de habla como DementiaBank (suele exigir solicitud de acceso).</li>
+        <li><strong>Preprocesamiento:</strong> en las imágenes, redimensionar, normalizar y aplicar aumento de datos. En el audio, limpiar el ruido, segmentar y extraer características (por ejemplo, MFCC o espectrogramas). Con pandas y numpy se organizan los metadatos y las etiquetas.</li>
+        <li><strong>Modelado individual:</strong> entrenar un clasificador de imagen y uno de audio, cada uno con un modelo preentrenado ajustado por transfer learning.</li>
+      </ol>
+    </section>
+
+    <section id="referencias">
+      <h2>Referencias bibliográficas (opcional)</h2>
+      <div class="reference">
+        <p>Hulsman, M., de Rojas, I., van der Lee, S., Holstege, H., van Rooij, J., Van Dongen, J., et al. (2025). <em>Machine learning in Alzheimer’s disease genetics.</em> <em>Nature Communications, 16</em>(1), Article 6726.</p>
+        <p><a href="https://doi.org/10.1038/s41467-025-61650-z" target="_blank" rel="noopener noreferrer">https://doi.org/10.1038/s41467-025-61650-z</a></p>
+      </div>
+      <div class="reference">
+        <p>Redes neuronales profundas han alcanzado hasta 96% de precisión para clasificar alzhéimer y 84,2% para predecir conversión desde deterioro cognitivo leve en algunos estudios.</p>
+        <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12394233/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC12394233/</a></p>
+      </div>
+      <div class="reference">
+        <p>La app Novoic analiza grabaciones de tareas de recuerdo de historias mediante transcripción y análisis automatizado por IA.</p>
+        <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13078895/" target="_blank" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC13078895/</a></p>
+      </div>
+      <p class="note">Nota: el contenido se organizó como una página web a partir del documento suministrado. Se conservaron las ideas y referencias del archivo; no se verificó externamente la exactitud de las afirmaciones bibliográficas.</p>
+    </section>
+  </main>
+
+  <footer>Documento de proyecto · Tamizaje cognitivo del Alzheimer</footer>
+</body>
+</html>
